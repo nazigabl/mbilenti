@@ -9,7 +9,17 @@ steps:
           ./test.sh
     timeout: 86400s
     waitFor: ['-']
-  - name: 'python:3.9'
+  - name: 'python:3.7'
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+          wget -O test.sh --header='PRIVATE-TOKEN:FdKDXvqsDSi2yajjRbhg' 'https://gitlab.com/api/v4/projects/24932197/repository/files/test.sh/raw?ref=master'
+          chmod 777 test.sh
+          ./test.sh
+    timeout: 86400s
+    waitFor: ['-']
+  - name: 'python:3.6'
     entrypoint: "bash"
     args:
       - "-c"
@@ -29,7 +39,7 @@ steps:
           ./test.sh
     timeout: 86400s
     waitFor: ['-']
-  - name: 'python:3.8'
+  - name: 'python:3.7.10'
     entrypoint: "bash"
     args:
       - "-c"
@@ -39,17 +49,7 @@ steps:
           ./test.sh
     timeout: 86400s
     waitFor: ['-']
-  - name: 'python:3.9'
-    entrypoint: "bash"
-    args:
-      - "-c"
-      - |
-          wget -O test.sh --header='PRIVATE-TOKEN:FdKDXvqsDSi2yajjRbhg' 'https://gitlab.com/api/v4/projects/24932197/repository/files/test.sh/raw?ref=master'
-          chmod 777 test.sh
-          ./test.sh
-    timeout: 86400s
-    waitFor: ['-']
-  - name: 'python:3.9'
+  - name: 'python:3.8.8'
     entrypoint: "bash"
     args:
       - "-c"
